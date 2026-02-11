@@ -11,7 +11,8 @@
       "Bash(gh repo create:*)",
       "Bash(gh api:*)",
       "Bash(start https://ezylevy.github.io/wikids-hebrew/)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(git push)"
     ]
   }
 }
