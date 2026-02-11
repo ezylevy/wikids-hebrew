@@ -3,29 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ויקידס - האנציקלופדיה המדברת לילדים בגילאי 3-7 - אפליקציה חינוכית בטוחה</title>
-    <meta name="description" content="ויקידס היא אפליקציה חינוכית מושלמת לילדים בגילאי 3-7. אנציקלופדיה מדברת עם 192 נושאים מקריאים, מאושרת על ידי מורים.">
+    <title>ויקידס | האנציקלופדיה המדברת לילדים 3-7 | אפליקציה חינוכית בטוחה</title>
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="ויקידס - האנציקלופדיה המדברת לילדים">
-    <meta property="og:description" content="תנו לילדים סקרנים לגלות את העולם בבטחה">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="תנו לילד שלכם את השמחה של גילוי עצמאי. אנציקלופדיה מדברת 100% ללא פרסומות לילדים שעדיין לא קוראים.">
+    <link rel="canonical" href="https://wikids.world/he/" />
+
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wikids.world/he/">
+    <meta property="og:title" content="ויקידס - אנציקלופדיה שמדברת לילדים">
+    <meta property="og:description" content="ויקידס היא אנציקלופדיה מדברת לילדים צעירים שהופכת את הגישה לעולם שלם של ידע מרתק לקלה ומהנה.">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Bootstrap CSS RTL -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Fonts - Heebo for Hebrew -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --primary-color: #FF6B35;
-            --secondary-color: #4ECDC4;
-            --accent-color: #FFE66D;
-            --dark-color: #2C3E50;
-            --light-color: #F7F9FC;
-            --text-color: #333;
-            --white: #ffffff;
+            --primary-blue: #000000;
+            --light-blue: #E8F4FD;
+            --white: #FFFFFF;
+            --text-dark: #2C3E50;
+            --text-light: #666666;
+            --light-gray: #72dfe4;
+            --light-orange: #fcefce;
+            --green-landscape: #b4e0d1;
+            --warm-orange: #f8b26c;
+            --wikids-yellow: #fff2bf;
+            --wikids-new1: #fff2bf;
+            --wikids-new2: #b4e0d1;
+            --wikids-blueish: #b4eaf2;
+            --wikids-new4: #ffc7f9;
+            --menu-button-bg: #00dae0;
+            --sky-blue-legacy: #b4eaf2;
+            --footer-bg: #52404a;
+            --footer-text: #E8E8E8;
+            --footer-border: #34495E;
+            --black-transparent-08: rgba(0, 0, 0, 0.08);
+            --black-transparent-10: rgba(0, 0, 0, 0.1);
+            --black-transparent-15: rgba(0, 0, 0, 0.15);
+            --black-transparent-20: rgba(0, 0, 0, 0.2);
+            --wikids-blue-gradient: linear-gradient(to bottom, #b4eaf2 0%, #d4f0f5 100%);
         }
 
         * {
@@ -35,725 +61,969 @@
         }
 
         body {
-            font-family: 'Rubik', 'Segoe UI', Tahoma, sans-serif;
+            font-family: 'Heebo', sans-serif;
             line-height: 1.6;
-            color: var(--text-color);
+            color: var(--text-dark);
+            overflow-x: hidden;
             direction: rtl;
             text-align: right;
         }
 
-        /* Header */
-        header {
-            background: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
+        html {
+            scroll-behavior: smooth;
         }
 
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        /* Navigation */
+        .navbar.navbar-pill {
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+            background: transparent !important;
+            box-shadow: none;
         }
 
-        .logo img {
-            height: 50px;
+        .navbar.navbar-pill .container {
+            background: #fffdd6;
+            border-radius: 999px;
+            padding: 0.5rem 1.5rem;
+            box-shadow: 0 6px 20px var(--black-transparent-10);
         }
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
+        .navbar.navbar-pill .navbar-brand img {
+            max-height: 46px;
         }
 
-        nav a {
-            text-decoration: none;
-            color: var(--dark-color);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--primary-color);
-        }
-
-        .cta-button {
-            background: var(--primary-color);
-            color: var(--white);
-            padding: 12px 25px;
-            border-radius: 25px;
-            text-decoration: none;
+        .navbar.navbar-pill .nav-link {
+            color: var(--text-dark) !important;
             font-weight: 600;
-            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 0 0.6rem;
+            transition: color 0.3s ease;
         }
 
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(255, 107, 53, 0.4);
+        .navbar.navbar-pill .nav-link:hover {
+            color: var(--primary-blue) !important;
         }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 150px 20px 80px;
-            text-align: center;
-            color: var(--white);
-            position: relative;
-            overflow: hidden;
+        .btn-download-nav {
+            background: var(--menu-button-bg);
+            color: var(--text-dark) !important;
+            padding: 0.5rem 1.25rem;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s ease;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="3" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
-            pointer-events: none;
+        .btn-download-nav:hover {
+            transform: scale(1.05);
+            color: var(--text-dark);
         }
 
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
+        /* Promotion Section */
+        .promotion-section {
+            padding: 7rem 0 4rem 0;
+            background-color: var(--wikids-yellow);
         }
 
-        .hero h1 {
+        .promotion-content {
+            padding-top: 3rem;
+        }
+
+        .promotion-title {
             font-size: 3rem;
-            margin-bottom: 20px;
             font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.2;
         }
 
-        .hero p {
+        .promotion-subtitle {
             font-size: 1.3rem;
-            margin-bottom: 30px;
-            opacity: 0.95;
+            color: var(--text-light);
+            margin-top: 1rem;
         }
 
-        .app-badges {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 30px;
+        .download-lead {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-top: 1.5rem;
         }
 
-        .app-badges img {
-            height: 50px;
-            transition: transform 0.3s;
+        .download-btn {
+            max-height: 60px;
+            transition: transform 0.2s ease-in-out;
         }
 
-        .app-badges img:hover {
+        .download-btn:hover {
             transform: scale(1.05);
         }
 
-        .features-badge {
-            display: inline-block;
-            background: rgba(255,255,255,0.2);
-            padding: 10px 25px;
-            border-radius: 20px;
+        .download-note {
             font-size: 0.95rem;
+            color: var(--text-light);
         }
 
-        .app-preview {
-            margin-top: 40px;
+        .video-wrapper {
+            position: relative;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px var(--black-transparent-20);
         }
 
-        .app-preview img {
-            max-width: 300px;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        .promotion-video {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 25px;
         }
 
-        /* Testimonials */
-        .testimonials {
-            padding: 80px 20px;
-            background: var(--light-color);
+        .promotion-media {
+            position: relative;
         }
 
-        .section-title {
-            text-align: center;
-            font-size: 2.2rem;
-            margin-bottom: 50px;
-            color: var(--dark-color);
+        .video-overlay-logo {
+            position: absolute;
+            bottom: -12px;
+            right: -12px;
+            width: 14%;
+            max-width: 120px;
+            min-width: 58px;
+            z-index: 2;
         }
 
-        .testimonials-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+        /* Testimonials Section */
+        .testimonials-section {
+            background: #f9f6ef;
+            padding: 5rem 0 4.5rem;
+        }
+
+        .testimonials-title {
+            color: var(--text-dark);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .testimonials-subtitle {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--text-dark);
         }
 
         .testimonial-card {
             background: var(--white);
-            padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
+            padding: 2rem;
+            box-shadow: 0 5px 15px var(--black-transparent-10);
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
         }
 
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .stars {
-            color: #FFD700;
-            font-size: 1.2rem;
-            margin-bottom: 15px;
+        .testimonial-rating {
+            width: 100px;
+            margin: 0 auto 0.8rem;
         }
 
         .testimonial-text {
-            font-style: italic;
-            margin-bottom: 15px;
-            line-height: 1.8;
+            font-size: 1.1rem;
+            color: var(--text-light);
+            flex-grow: 1;
+            margin-bottom: 1rem;
         }
 
         .testimonial-author {
             font-weight: 600;
-            color: var(--primary-color);
+            color: var(--text-dark);
         }
 
-        /* Benefits */
-        .benefits {
-            padding: 80px 20px;
+        /* Discovery Section */
+        .discovery-section {
             background: var(--white);
+            padding: 4rem 0;
         }
 
-        .benefits-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
+        .discovery-card {
+            background: #b4e0d1;
+            border-radius: 18px;
+            padding: 3rem 3.5rem;
+        }
+
+        .discovery-illustration {
+            max-width: 340px;
+            width: 100%;
+            animation: discovery-jump 2.8s linear infinite;
+        }
+
+        @keyframes discovery-jump {
+            0%, 28.57%, 100% { transform: translateY(0); }
+            7.14%, 21.43% { transform: translateY(-20px); }
+        }
+
+        .discovery-text h2 {
+            color: var(--text-dark);
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .discovery-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .discovery-note {
+            margin-top: 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        /* Blog Snapshots Section */
+        .blog-snapshots-section {
+            background: #f9f6ef;
+            padding: 4.5rem 0 4rem;
+        }
+
+        .blog-snapshots-title {
+            color: var(--text-dark);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        .blog-snapshot-slide {
+            display: flex;
+            background: linear-gradient(90deg, #f6d08c 0%, #f1c067 100%);
+            border-radius: 26px;
+            box-shadow: 0 10px 12px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-snapshot-media {
+            flex: 0 0 40%;
+        }
+
+        .blog-snapshot-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .blog-snapshot-body {
+            flex: 1;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-snapshot-body h4 {
+            color: #1b1b1b;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .blog-snapshot-text {
+            font-size: 1.1rem;
+            color: #1b1b1b;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .blog-snapshot-btn {
+            align-self: flex-start;
+            margin-top: 1rem;
+            background: #fff7e1;
+            color: #e59a1b;
+            border-radius: 999px;
+            padding: 0.75rem 2.25rem;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease;
+        }
+
+        .blog-snapshot-btn:hover {
+            transform: translateY(-2px);
+            color: #e59a1b;
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            background: var(--wikids-blue-gradient);
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            color: var(--text-dark);
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
         }
 
         .benefit-card {
-            text-align: center;
-            padding: 30px;
-        }
-
-        .benefit-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 20px;
-            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-            border-radius: 50%;
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px var(--black-transparent-10);
+            height: 100%;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
+            flex-direction: column;
+            text-align: center;
+            min-height: 400px;
+            transition: transform 0.3s ease;
         }
 
-        .benefit-card h3 {
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-card img {
+            height: auto;
+            max-width: 100%;
+            margin: 0 auto 1rem;
+        }
+
+        .benefit-card h4 {
+            color: var(--primary-blue);
             font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: var(--dark-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            min-height: 50px;
         }
 
         .benefit-card p {
-            color: #666;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            flex-grow: 1;
         }
 
-        /* Owl Section */
-        .owl-section {
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            text-align: center;
+        /* Curiosity Section */
+        .curiosity-section {
+            background: var(--wikids-new4);
+            padding: 4rem 0;
         }
 
-        .owl-container {
-            max-width: 800px;
-            margin: 0 auto;
+        .curiosity-consolidated-card {
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            padding: 3rem;
         }
 
-        .owl-image {
-            max-width: 200px;
-            margin-bottom: 30px;
+        .card-header-container {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .flying-owl-container {
+            flex: 0 0 200px;
+        }
+
+        .flying-owl-gif {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .curiosity-card-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .curiosity-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .curiosity-paragraph {
+            font-size: 1.2rem;
+            color: var(--text-dark);
+        }
+
+        /* About App Section */
+        .about-app-section {
+            background: var(--sky-blue-legacy);
+            padding: 5rem 0;
+            position: relative;
+        }
+
+        .about-video {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px var(--black-transparent-20);
+        }
+
+        .try-free-text {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin: 1.5rem 0;
+        }
+
+        .section-subtitle {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .hot-air-balloon {
+            max-width: 150px;
             animation: float 3s ease-in-out infinite;
         }
 
         @keyframes float {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+            50% { transform: translateY(-15px); }
         }
 
-        .owl-section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: var(--dark-color);
+        /* Download Section */
+        .download-section {
+            background: var(--wikids-yellow);
+            padding: 4rem 0;
+            position: relative;
         }
 
-        .owl-section p {
-            font-size: 1.1rem;
-            color: #555;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Blog Preview */
-        .blog-preview {
-            padding: 80px 20px;
-            background: var(--white);
-        }
-
-        .blog-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .blog-card {
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .blog-card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
-
-        .blog-card-content {
-            padding: 20px;
-        }
-
-        .blog-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            color: var(--dark-color);
-        }
-
-        .blog-card p {
-            color: #666;
-            font-size: 0.95rem;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            padding: 80px 20px;
-            background: linear-gradient(135deg, var(--primary-color), #ff8f6b);
-            text-align: center;
-            color: var(--white);
-        }
-
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .cta-section p {
+        .download-subtitle {
             font-size: 1.2rem;
-            margin-bottom: 30px;
-            opacity: 0.95;
+            color: var(--text-light);
+            margin-bottom: 2rem;
         }
 
-        .cta-section .cta-button {
-            background: var(--white);
-            color: var(--primary-color);
-            font-size: 1.1rem;
-            padding: 15px 40px;
+        .download-info {
+            margin-top: 2rem;
+            color: var(--text-light);
+        }
+
+        /* Upper Footer */
+        .upper-footer-section img {
+            width: 100%;
+            display: block;
         }
 
         /* Footer */
-        footer {
-            background: var(--dark-color);
-            color: var(--white);
-            padding: 60px 20px 30px;
+        .footer-section {
+            background: var(--footer-bg);
+            padding: 3rem 0 1.5rem;
+            color: var(--footer-text);
         }
 
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-        }
-
-        .footer-section h4 {
+        .footer-title {
             font-size: 1.1rem;
-            margin-bottom: 20px;
-            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--white);
         }
 
-        .footer-section ul {
+        .footer-links {
             list-style: none;
+            padding: 0;
         }
 
-        .footer-section li {
-            margin-bottom: 10px;
+        .footer-links li {
+            margin-bottom: 0.5rem;
         }
 
-        .footer-section a {
-            color: rgba(255,255,255,0.8);
+        .footer-links a {
+            color: var(--footer-text);
             text-decoration: none;
             transition: color 0.3s;
         }
 
-        .footer-section a:hover {
+        .footer-links a:hover {
             color: var(--white);
         }
 
-        .social-links {
+        .social-media {
             display: flex;
-            gap: 15px;
-            margin-top: 20px;
+            gap: 1rem;
+            margin-bottom: 1rem;
         }
 
-        .social-links a {
+        .social-icon {
             width: 40px;
             height: 40px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            color: var(--footer-text);
+            text-decoration: none;
             transition: background 0.3s;
         }
 
-        .social-links a:hover {
-            background: var(--primary-color);
+        .social-icon:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--white);
         }
 
-        .footer-bottom {
-            max-width: 1200px;
-            margin: 40px auto 0;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
+        .footer-cta {
+            font-size: 0.95rem;
+            color: var(--footer-text);
+        }
+
+        .footer-copyright {
             text-align: center;
-            color: rgba(255,255,255,0.6);
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
         }
 
-        /* Scroll Reveal Animation */
-        .reveal {
+        /* Scroll Reveal */
+        .scroll-reveal {
             opacity: 0;
             transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
+            transition: opacity 0.8s ease, transform 0.8s ease;
         }
 
-        .reveal.active {
+        .scroll-reveal.in-view {
             opacity: 1;
             transform: translateY(0);
         }
 
-        /* Mobile Menu */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--dark-color);
+        /* Responsive */
+        @media (max-width: 991.98px) {
+            .navbar.navbar-pill .container {
+                border-radius: 24px;
+            }
+
+            .promotion-title {
+                font-size: 2.2rem;
+            }
+
+            .card-header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .blog-snapshot-slide {
+                flex-direction: column;
+            }
+
+            .blog-snapshot-media {
+                flex: none;
+                height: 200px;
+            }
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: block;
+        @media (max-width: 575.98px) {
+            .promotion-section {
+                padding: 6rem 0 3rem;
             }
 
-            nav {
-                display: none;
-                position: absolute;
-                top: 100%;
-                right: 0;
-                left: 0;
-                background: var(--white);
-                padding: 20px;
-                box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            }
-
-            nav.active {
-                display: block;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .app-badges {
-                flex-direction: column;
-                align-items: center;
+            .promotion-title {
+                font-size: 1.8rem;
             }
 
             .section-title {
+                font-size: 1.8rem;
+            }
+
+            .testimonials-title, .blog-snapshots-title {
                 font-size: 1.8rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="header-container">
-            <a href="#" class="logo">
-                <img src="https://wikids.world/wp-content/uploads/2023/09/wikids_logo_c.png" alt="ויקידס לוגו">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-pill">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="img/wikids_logo_c.png" alt="לוגו ויקידס" height="42">
             </a>
-
-            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
-
-            <nav id="mainNav">
-                <ul>
-                    <li><a href="#benefits">יתרונות</a></li>
-                    <li><a href="#blog">בלוג</a></li>
-                    <li><a href="#download">הורדה</a></li>
-                    <li><a href="#contact">צרו קשר</a></li>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#benefits">יתרונות</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog-snapshots">הבלוג</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#download">הורדה</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#footer">צור קשר</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-download-nav" href="#download" role="button">נסו בחינם</a>
+                    </li>
                 </ul>
-            </nav>
-
-            <a href="#download" class="cta-button">מוכנים, יוצאים לגלות!</a>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>האנציקלופדיה המדברת לילדים</h1>
-            <p>מתוכננת במיוחד לילדים שעדיין לא קוראים, ויקידס מאפשרת לילדים לחקור ולגלות את העולם בבטחה ובשמחה.</p>
-
-            <div class="app-badges" id="download">
-                <a href="https://apps.apple.com/app/wikids" target="_blank">
-                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="הורדה מ-App Store">
-                </a>
-                <a href="https://play.google.com/store/apps/details?id=com.wikids" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="הורדה מ-Google Play">
-                </a>
-            </div>
-
-            <div class="features-badge">
-                מאושר על ידי מורים • לגילאי 3-7 • 192 נושאים מקריאים
-            </div>
-
-            <div class="app-preview">
-                <img src="https://wikids.world/wp-content/uploads/2023/09/wikids_app.png" alt="תצוגה מקדימה של אפליקציית ויקידס">
             </div>
         </div>
-    </section>
+    </nav>
 
-    <!-- Testimonials -->
-    <section class="testimonials reveal">
-        <h2 class="section-title">מה ההורים והמורים אומרים</h2>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"הבן שלי לא מפסיק לחקור נושאים חדשים! הוא למד על דינוזאורים, כוכבי לכת והרבה יותר. אפליקציה מדהימה!"</p>
-                <p class="testimonial-author">- מיכל, אמא לילד בן 5</p>
-            </div>
-
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"כמורה לגן ילדים, אני ממליצה על ויקידס לכל ההורים. זה בטוח, חינוכי ומהנה בו זמנית."</p>
-                <p class="testimonial-author">- שרה, גננת</p>
-            </div>
-
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"סוף סוף אפליקציה שאני יכולה לתת לילדים שלי בלי לדאוג. התוכן מותאם בצורה מושלמת לגיל שלהם."</p>
-                <p class="testimonial-author">- רונית, אמא לשני ילדים</p>
-            </div>
-
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"הקריינות באיכות גבוהה והאיורים יפהפיים. הילדים שלי מבקשים ללמוד עוד ועוד!"</p>
-                <p class="testimonial-author">- דני, אבא לילדה בת 4</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits -->
-    <section class="benefits reveal" id="benefits">
-        <h2 class="section-title">ידע שהופך לשמחה</h2>
-        <div class="benefits-grid">
-            <div class="benefit-card">
-                <div class="benefit-icon">🔒</div>
-                <h3>בטוח לחלוטין</h3>
-                <p>ללא פרסומות, ללא קישורים חיצוניים וללא תוכן לא מתאים. הילדים שלכם בסביבה מוגנת.</p>
-            </div>
-
-            <div class="benefit-card">
-                <div class="benefit-icon">🎧</div>
-                <h3>קריינות מקצועית</h3>
-                <p>כל הנושאים מוקראים בקול ברור ונעים, מושלם לילדים שעדיין לא קוראים.</p>
-            </div>
-
-            <div class="benefit-card">
-                <div class="benefit-icon">🎨</div>
-                <h3>איורים מקסימים</h3>
-                <p>איורים צבעוניים ומושכים שנוצרו במיוחד כדי לעורר סקרנות ודמיון.</p>
-            </div>
-
-            <div class="benefit-card">
-                <div class="benefit-icon">📚</div>
-                <h3>192 נושאים מגוונים</h3>
-                <p>מבעלי חיים ועד חלל, מהיסטוריה ועד מדע - יש כאן עולם שלם לגלות.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Owl Philosophy Section -->
-    <section class="owl-section reveal">
-        <div class="owl-container">
-            <img src="https://wikids.world/wp-content/uploads/2023/09/owl_banner.png" alt="ינשוף ויקידס" class="owl-image">
-            <h2>הפילוסופיה שלנו</h2>
-            <p>אנחנו מאמינים שכל ילד נולד סקרן. המשימה שלנו היא לתת לסקרנות הזו לפרוח, בסביבה בטוחה ומעשירה, שמכבדת את הקצב הטבעי של כל ילד.</p>
-        </div>
-    </section>
-
-    <!-- Blog Preview -->
-    <section class="blog-preview reveal" id="blog">
-        <h2 class="section-title">מהבלוג שלנו</h2>
-        <div class="blog-grid">
-            <article class="blog-card">
-                <img src="https://wikids.world/wp-content/uploads/2023/09/blog1.jpg" alt="מאמר בלוג" onerror="this.src='https://via.placeholder.com/400x200/667eea/ffffff?text=Blog'">
-                <div class="blog-card-content">
-                    <h3>איך לעודד סקרנות אצל ילדים צעירים</h3>
-                    <p>טיפים פרקטיים להורים שרוצים לטפח את הסקרנות הטבעית של ילדיהם...</p>
+    <!-- Promotion Section -->
+    <section id="promotion" class="promotion-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="promotion-content">
+                        <h1 class="promotion-title">מוכנים, יוצאים לגלות!</h1>
+                        <p class="promotion-subtitle">מתוכננת במיוחד לילדים שעדיין לא קוראים, ויקידס מאפשרת לילדים לחקור את העולם בעצמם.</p>
+                        <div class="download-lead">התחילו את תקופת הניסיון החינמית היום</div>
+                        <div class="app-buttons mt-3 d-flex flex-wrap gap-3">
+                            <a href="https://apps.apple.com/us/app/wikids-encyclopedia-that-talks/id903091915" target="_blank">
+                                <img src="img/download_app.png" alt="הורדה מ-App Store" class="download-btn">
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.wiki_kids.wikidsanimals" target="_blank">
+                                <img src="img/google_play_icon.png" alt="הורדה מ-Google Play" class="download-btn">
+                            </a>
+                        </div>
+                        <p class="mt-4 mb-0 download-note">מאושר ע"י מורים <img src="img/teachers.png" style="height: 24px; vertical-align: middle;"> | לגילאי 3-7 | 192 נושאים מוקראים | 100% בטוח לילדים | ללא פרסומות</p>
+                    </div>
                 </div>
-            </article>
-
-            <article class="blog-card">
-                <img src="https://wikids.world/wp-content/uploads/2023/09/blog2.jpg" alt="מאמר בלוג" onerror="this.src='https://via.placeholder.com/400x200/764ba2/ffffff?text=Blog'">
-                <div class="blog-card-content">
-                    <h3>זמן מסך בריא לגיל הרך</h3>
-                    <p>מדריך מקיף להורים על איזון זמן מסך לילדים בגילאי 3-7...</p>
+                <div class="col-lg-7">
+                    <div class="promotion-media">
+                        <div class="video-wrapper">
+                            <img src="img/wikids_app.png" alt="אפליקציית ויקידס" class="promotion-video">
+                        </div>
+                        <img src="img/wikids_app.png" alt="אייקון ויקידס" class="video-overlay-logo">
+                    </div>
                 </div>
-            </article>
-
-            <article class="blog-card">
-                <img src="https://wikids.world/wp-content/uploads/2023/09/blog3.jpg" alt="מאמר בלוג" onerror="this.src='https://via.placeholder.com/400x200/4ECDC4/ffffff?text=Blog'">
-                <div class="blog-card-content">
-                    <h3>למידה דרך משחק - למה זה עובד</h3>
-                    <p>המדע מאחורי למידה משחקית וכיצד היא משפיעה על התפתחות המוח...</p>
-                </div>
-            </article>
-
-            <article class="blog-card">
-                <img src="https://wikids.world/wp-content/uploads/2023/09/blog4.jpg" alt="מאמר בלוג" onerror="this.src='https://via.placeholder.com/400x200/FF6B35/ffffff?text=Blog'">
-                <div class="blog-card-content">
-                    <h3>הכנה לבית הספר מגיל צעיר</h3>
-                    <p>כיצד לימוד עצמאי מוקדם מכין את הילדים להצלחה בבית הספר...</p>
-                </div>
-            </article>
+            </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section reveal">
-        <h2>תנו לילדים שלכם את מתנת הגילוי</h2>
-        <p>הצטרפו לאלפי משפחות שכבר גילו את ויקידס</p>
-        <a href="#download" class="cta-button">הורידו עכשיו בחינם</a>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section scroll-reveal">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h3 class="testimonials-title">מה ההורים אומרים עלינו</h3>
+                    <p class="testimonials-subtitle">אל תסמכו רק על המילה שלנו. כך ויקידס הציתה סקרנות ובנתה ביטחון עצמי לילדים בבתים כמו שלכם.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <p class="testimonial-author">שרה ת. (ישראל)</p>
+                        <img src="img/rating_5star.png" alt="5 כוכבים" class="testimonial-rating">
+                        <p class="testimonial-text">סוף סוף זמן מסך שאני מרגישה טוב איתו! הבת שלי אוהבת ללמוד עובדות חדשות, ואני אוהבת כמה זה בטוח וחינוכי. שווה כל שקל.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <p class="testimonial-author">מורים עם אפליקציות</p>
+                        <img src="img/rating_5star.png" alt="5 כוכבים" class="testimonial-rating">
+                        <p class="testimonial-text">אפליקציות ויקידס מציעות שפע של ידע מרתק לילדים סקרנים, כתוב במיוחד עבורם. זה מרחיב את נקודת המבט של כל ילד על העולם סביבו.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <p class="testimonial-author">אמא לילד בן 4 (ישראל)</p>
+                        <img src="img/rating_5star.png" alt="5 כוכבים" class="testimonial-rating">
+                        <p class="testimonial-text">בול בזמן! רק חיפשנו אפליקציה כזו לבן שלנו בן ה-4 ששואל המון שאלות. איזה דרך נהדרת לגלות את העולם לפני שלומדים לקרוא.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discovery Section -->
+    <section id="discovery" class="discovery-section scroll-reveal">
+        <div class="container">
+            <div class="discovery-card">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 text-center mb-4 mb-lg-0">
+                        <img src="img/owl_banner.png" alt="ינשוף ויקידס" class="discovery-illustration">
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="discovery-text">
+                            <h2>תנו לילדים סקרנים את שמחת הגילוי</h2>
+                            <p class="discovery-subtitle">
+                                מאות נושאים קצרים ומוקראים בקול ידידותי, מזמינים ילדים שעדיין לא קוראים לחקור את העולם בעצמם.<br>
+                                התחילו את ההרפתקה שלהם היום עם ניסיון חינם.
+                            </p>
+                            <div class="app-buttons d-flex flex-wrap gap-3">
+                                <a href="https://apps.apple.com/us/app/wikids-encyclopedia-that-talks/id903091915" target="_blank">
+                                    <img src="img/download_app.png" alt="הורדה מ-App Store" class="download-btn">
+                                </a>
+                                <a href="https://play.google.com/store/apps/details?id=com.wiki_kids.wikidsanimals" target="_blank">
+                                    <img src="img/google_play_icon.png" alt="הורדה מ-Google Play" class="download-btn">
+                                </a>
+                            </div>
+                            <p class="discovery-note">ללא פרסומות. ללא לחץ. רק סקרנות.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Snapshots Section -->
+    <section id="blog-snapshots" class="blog-snapshots-section scroll-reveal">
+        <div class="container">
+            <div class="row text-center mb-4">
+                <div class="col-12">
+                    <h3 class="blog-snapshots-title">גלו את הבלוג של ויקידס</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <article class="blog-snapshot-slide">
+                        <div class="blog-snapshot-media">
+                            <img src="img/Blog/1-The_Joy_the_Little_Expert.png" alt="השמחה של המומחה הקטן">
+                        </div>
+                        <div class="blog-snapshot-body">
+                            <h4>השמחה של המומחה הקטן</h4>
+                            <p class="blog-snapshot-text">יש קסם מיוחד ברגעים השקטים האלה כשהילד שלכם מפיל באופן אקראי "פצצת ידע" לתוך שיחה. בין אם זה הילד בן ה-4 שלכם שמזכיר, לגמרי יש מאין...</p>
+                            <a class="blog-snapshot-btn" href="#">קראו עוד</a>
+                        </div>
+                    </article>
+                    <article class="blog-snapshot-slide">
+                        <div class="blog-snapshot-media">
+                            <img src="img/Blog/2-How_Curiosity_Actually_Works.png" alt="איך הסקרנות באמת עובדת">
+                        </div>
+                        <div class="blog-snapshot-body">
+                            <h4>רשת הפלא: איך הסקרנות של הילד שלכם באמת עובדת</h4>
+                            <p class="blog-snapshot-text">כמבוגרים, אנחנו חושבים בקווים ישרים. אבל המוח של ילד עובד כמו רשת יפהפייה ומסתעפת. רגע שקט של למידה על קואלות יכול לעורר מחשבה על אוסטרליה...</p>
+                            <a class="blog-snapshot-btn" href="#">קראו עוד</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits-section scroll-reveal">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">ידע שהופך לשמחה, סקרנות ללא גבולות</h2>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card">
+                        <img src="img/benefits1.png" alt="הלמידה הכי מרתקת">
+                        <h4>הלמידה הכי מרתקת</h4>
+                        <p>כל נושא מועבר בקריינות אנושית מרתקת של 30 שניות, בליווי תמונות וצלילים.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card">
+                        <img src="img/benefits2.png" alt="מניע הצלחה דרך סקרנות">
+                        <h4>מניע הצלחה דרך סקרנות</h4>
+                        <p>ידע מעצים! הוא מגביר את הביטחון העצמי של הילד ויוצר דחף טבעי ללמוד עוד.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card">
+                        <img src="img/benefits3.png" alt="שקט נפשי מוחלט">
+                        <h4>שקט נפשי מוחלט</h4>
+                        <p>100% זמן מסך בטוח, ללא פרסומות או הסחות דעת, פותח עם מומחי חינוך.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card">
+                        <img src="img/benefits4.png" alt="מפתח חשיבה מקושרת">
+                        <h4>מפתח חשיבה מקושרת</h4>
+                        <p>כל נושא מתחבר לאחר, עוזר לילד לגלות איך הכל בעולם קשור ולהבין את התמונה הגדולה - צעד סקרן אחד בכל פעם.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curiosity Section -->
+    <section id="curiosity" class="curiosity-section scroll-reveal">
+        <div class="container">
+            <div class="row text-center mb-4">
+                <div class="col-12">
+                    <h2 class="section-title">ילדים נולדים סקרנים. שמרו על זה ככה.</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="curiosity-consolidated-card">
+                        <div class="card-header-container">
+                            <div class="flying-owl-container">
+                                <img src="img/flying_owl.gif" alt="ינשוף מעופף" class="flying-owl-gif">
+                            </div>
+                            <div class="card-header-text">
+                                <h2 class="curiosity-card-title">תנו לילד שלכם לגלות באופן עצמאי, עוד לפני שהוא יודע לקרוא</h2>
+                                <p class="curiosity-subtitle">ויקידס היא אנציקלופדיה שקטה מבוססת אודיו שעוזרת לילדים לחקור את העולם בהתפעלות. כל נושא כתוב מנקודת מבט של ילד ומוקרא בחמימות, כך שהלמידה מרגישה טבעית ומהנה.</p>
+                            </div>
+                        </div>
+                        <div class="curiosity-paragraph text-center"><b>ככל שילדים יודעים יותר, הם רוצים לדעת יותר,<br>וכדור השלג של הסקרנות ממשיך להתגלגל, וגדל בכל יום.</b></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About App Section -->
+    <section id="about-app" class="about-app-section scroll-reveal">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="img/upper-footer.png" alt="מסך ויקידס" class="about-video">
+                    <div class="try-free-text text-center mt-3">נסו עכשיו בחינם!</div>
+                    <div class="app-buttons text-center">
+                        <a href="https://apps.apple.com/us/app/wikids-encyclopedia-that-talks/id903091915" target="_blank" style="margin-left: 20px;">
+                            <img src="img/download_app.png" alt="הורדה מ-App Store" class="download-btn">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.wiki_kids.wikidsanimals" target="_blank">
+                            <img src="img/google_play_icon.png" alt="הורדה מ-Google Play" class="download-btn">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="content-with-balloon text-center text-lg-start">
+                        <h2 class="section-title">ויקידס, האנציקלופדיה הראשונה<br>שמדברת לילדים.</h2>
+                        <h3 class="section-subtitle">ככל שילדים יודעים יותר -<br>הם רוצים לדעת יותר!</h3>
+                        <img src="img/red-balloon.png" alt="כדור פורח" class="hot-air-balloon my-3">
+                        <p class="section-description">כל התוכן שלנו בטוח, ונוצר במיוחד לילדים.<br>
+                            אין פרסומות, אין קישורים, רק מרחב רגוע ושמח שבו חוקרים קטנים יכולים לגלות בחופשיות ובבטחה.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download-section scroll-reveal">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12">
+                    <h2 class="section-title">נסו עכשיו בחינם!</h2>
+                    <p class="download-subtitle">
+                        אנחנו בטוחים שברגע שהם יתחילו לחקור עם ויקידס, הם לא ירצו להפסיק. נסו עכשיו!
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-center text-center">
+                <div class="col-12">
+                    <div class="download-lead">התחילו את תקופת הניסיון החינמית היום</div>
+                    <div class="app-buttons mt-3 d-flex justify-content-center flex-wrap gap-3">
+                        <a href="https://apps.apple.com/us/app/wikids-encyclopedia-that-talks/id903091915" target="_blank">
+                            <img src="img/download_app.png" alt="הורדה מ-App Store" class="download-btn">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.wiki_kids.wikidsanimals" target="_blank">
+                            <img src="img/google_play_icon.png" alt="הורדה מ-Google Play" class="download-btn">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="download-info text-center">
+                        <p>כל התוכן שלנו בטוח, ונוצר במיוחד לילדים.<br>
+                            אין פרסומות, אין קישורים, רק מרחב רגוע ושמח שבו חוקרים קטנים יכולים לגלות בחופשיות ובבטחה.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upper Footer -->
+    <section id="upper-footer" class="upper-footer-section">
+        <img src="img/upper-footer.png" alt="מסך ראשי של ויקידס" class="img-fluid w-100">
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h4>ויקידס</h4>
-                <p style="color: rgba(255,255,255,0.7); margin-bottom: 15px;">האנציקלופדיה המדברת לילדים סקרנים בגילאי 3-7</p>
-                <div class="social-links">
-                    <a href="#" aria-label="פייסבוק">f</a>
-                    <a href="#" aria-label="טוויטר">t</a>
-                    <a href="#" aria-label="יוטיוב">y</a>
+    <footer id="footer" class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-column">
+                        <h5 class="footer-title">להורים</h5>
+                        <ul class="footer-links">
+                            <li><a href="#about-app">הקונספט שלנו</a></li>
+                            <li><a href="#footer">צור קשר</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-column">
+                        <h5 class="footer-title">לילדים הסקרנים שלנו</h5>
+                        <ul class="footer-links">
+                            <li><a href="https://play.google.com/store/apps/dev?id=8691401709562918488" target="_blank">ויקידס ב-Google Play</a></li>
+                            <li><a href="https://itunes.apple.com/us/developer/kidkedoo-ltd./id1016812128" target="_blank">ויקידס ב-iTunes</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-column">
+                        <ul class="footer-links">
+                            <li><a href="#" target="_blank">מדיניות פרטיות</a></li>
+                            <li><a href="#" target="_blank">תנאי שימוש</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer-column">
+                        <div class="social-media">
+                            <a href="https://www.facebook.com/wikids123" target="_blank" class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://twitter.com/Wikids123" target="_blank" class="social-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCoyDG78v9kxxtVeTRQmx-gw" target="_blank" class="social-icon">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                        <p class="footer-cta">הילדים שלכם נהנים מויקידס?<br>כתבו לנו וקבלו דפי צביעה של אלוף ויקידס</p>
+                    </div>
                 </div>
             </div>
-
-            <div class="footer-section">
-                <h4>להורים</h4>
-                <ul>
-                    <li><a href="#">אודות ויקידס</a></li>
-                    <li><a href="#">שאלות נפוצות</a></li>
-                    <li><a href="#">צרו קשר</a></li>
-                    <li><a href="#">מדיניות פרטיות</a></li>
-                </ul>
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-copyright">
+                        <p>&copy; ויקידס <script>document.write(new Date().getFullYear())</script></p>
+                    </div>
+                </div>
             </div>
-
-            <div class="footer-section">
-                <h4>לילדים</h4>
-                <ul>
-                    <li><a href="#">נושאים פופולריים</a></li>
-                    <li><a href="#">משחקים</a></li>
-                    <li><a href="#">סרטונים</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h4>משפטי</h4>
-                <ul>
-                    <li><a href="#">תנאי שימוש</a></li>
-                    <li><a href="#">מדיניות פרטיות</a></li>
-                    <li><a href="#">COPPA</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>© <span id="currentYear"></span> ויקידס. כל הזכויות שמורות.</p>
         </div>
     </footer>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <script>
-        // Set current year
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    // Scroll reveal
+    (function() {
+        const reveals = document.querySelectorAll('.scroll-reveal');
+        if (!reveals.length) return;
 
-        // Mobile menu toggle
-        function toggleMenu() {
-            document.getElementById('mainNav').classList.toggle('active');
-        }
-
-        // Scroll reveal animation
-        const revealElements = document.querySelectorAll('.reveal');
-
-        const revealOnScroll = () => {
-            revealElements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-
-                if (elementTop < windowHeight - 100) {
-                    element.classList.add('active');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
                 }
             });
-        };
-
-        window.addEventListener('scroll', revealOnScroll);
-        window.addEventListener('load', revealOnScroll);
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
+        }, {
+            threshold: 0.08,
+            rootMargin: '0px 0px -40px 0px'
         });
+
+        reveals.forEach(el => observer.observe(el));
+    })();
     </script>
 </body>
 </html>
