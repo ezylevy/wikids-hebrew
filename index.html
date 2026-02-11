@@ -296,31 +296,18 @@
             margin-bottom: 2rem;
         }
 
-        .blog-snapshots-slider {
-            position: relative;
-            overflow: hidden;
-            padding: 10px 16px 22px;
-        }
-
-        .blog-snapshots-track {
-            display: flex;
-            gap: 24px;
-            transition: transform 0.6s ease;
-        }
-
         .blog-snapshot-slide {
-            flex: 0 0 100%;
             display: flex;
             background: linear-gradient(270deg, #f6d08c 0%, #f1c067 100%);
             border-radius: 26px;
             box-shadow: 0 10px 12px rgba(0, 0, 0, 0.15);
             overflow: hidden;
             min-height: 280px;
+            margin-bottom: 1.5rem;
         }
 
         .blog-snapshot-media {
             flex: 0 0 40%;
-            order: 2;
         }
 
         .blog-snapshot-media img {
@@ -334,7 +321,6 @@
             padding: 2.5rem;
             display: flex;
             flex-direction: column;
-            order: 1;
         }
 
         .blog-snapshot-body h4 {
@@ -369,89 +355,15 @@
             color: #e59a1b;
         }
 
-        .blog-snapshot-dots {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 1.25rem;
-        }
-
-        .blog-snapshot-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: #d6cebf;
-            border: none;
-            padding: 0;
-            cursor: pointer;
-        }
-
-        .blog-snapshot-dot.active {
-            background: var(--text-dark);
-        }
-
-        .blog-snapshot-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 46px;
-            height: 46px;
-            border-radius: 50%;
-            border: none;
-            background: #f1eadc;
-            color: var(--text-dark);
-            font-size: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: background 0.2s ease;
-            z-index: 10;
-        }
-
-        .blog-snapshot-nav:hover {
-            background: #d6cebf;
-        }
-
-        .blog-snapshot-nav.prev {
-            right: -10px;
-        }
-
-        .blog-snapshot-nav.next {
-            left: -10px;
-        }
-
-        .blog-snapshot-nav.prev::before {
-            content: "›";
-            font-size: 3.2rem;
-            line-height: 1;
-            position: absolute;
-            top: 45%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .blog-snapshot-nav.next::before {
-            content: "‹";
-            font-size: 3.2rem;
-            line-height: 1;
-            position: absolute;
-            top: 45%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        @media (max-width: 575.98px) {
+        @media (max-width: 767.98px) {
             .blog-snapshot-slide {
-                flex-direction: column;
+                flex-direction: column-reverse;
             }
             .blog-snapshot-media {
                 flex: none;
                 height: 200px;
-                order: 1;
             }
             .blog-snapshot-body {
-                order: 2;
                 padding: 1.6rem 1.5rem;
             }
         }
@@ -881,56 +793,49 @@
         <div class="container">
             <div class="row text-center mb-4">
                 <div class="col-12">
-                    <h3 class="blog-snapshots-title">גלו את הבלוג של ויקידס</h3>
+                    <h3 class="blog-snapshots-title">Explore the Wikids blog</h3>
                 </div>
             </div>
-            <div class="blog-snapshots-slider">
-                <div class="blog-snapshots-track">
-                    <article class="blog-snapshot-slide">
-                        <div class="blog-snapshot-media">
-                            <img src="img/Blog/1-The_Joy_the_Little_Expert.png" alt="השמחה של המומחה הקטן">
-                        </div>
-                        <div class="blog-snapshot-body">
-                            <h4>השמחה של המומחה הקטן</h4>
-                            <p class="blog-snapshot-text">יש קסם מיוחד ברגעים השקטים האלה כשהילד שלכם מפיל באופן אקראי "פצצת ידע" לתוך שיחה. בין אם זה הילד בן ה-4 שלכם שמזכיר, לגמרי יש מאין...</p>
-                            <a class="blog-snapshot-btn" href="#">קראו עוד</a>
-                        </div>
-                    </article>
-                    <article class="blog-snapshot-slide">
-                        <div class="blog-snapshot-media">
-                            <img src="img/Blog/2-How_Curiosity_Actually_Works.png" alt="איך הסקרנות באמת עובדת">
-                        </div>
-                        <div class="blog-snapshot-body">
-                            <h4>רשת הפלא: איך הסקרנות של הילד שלכם באמת עובדת</h4>
-                            <p class="blog-snapshot-text">כמבוגרים, אנחנו חושבים בקווים ישרים. אבל המוח של ילד עובד כמו רשת יפהפייה ומסתעפת. רגע שקט של למידה על קואלות יכול לעורר מחשבה על אוסטרליה...</p>
-                            <a class="blog-snapshot-btn" href="#">קראו עוד</a>
-                        </div>
-                    </article>
-                    <article class="blog-snapshot-slide">
-                        <div class="blog-snapshot-media">
-                            <img src="img/Blog/3-When_Curiosity_Outpaces_Reading.png" alt="כשהסקרנות עוקפת את הקריאה">
-                        </div>
-                        <div class="blog-snapshot-body">
-                            <h4>כשהסקרנות עוקפת את הקריאה: פתיחת העולם לחוקרים עצמאיים</h4>
-                            <p class="blog-snapshot-text">יש חלון ספציפי ויפה בילדות, בין גילאי 3 ל-8, שבו הסקרנות של הילד נעה במהירות של מאה קמ"ש, אבל כישורי הקריאה שלו עדיין מתפתחים...</p>
-                            <a class="blog-snapshot-btn" href="#">קראו עוד</a>
-                        </div>
-                    </article>
-                    <article class="blog-snapshot-slide">
-                        <div class="blog-snapshot-media">
-                            <img src="img/Blog/4-Why-Real_Discovery_Beats_Digital_Trophies.png" alt="למה גילוי אמיתי מנצח">
-                        </div>
-                        <div class="blog-snapshot-body">
-                            <h4>רגע ה"אהה!": למה גילוי אמיתי מנצח גביעים דיגיטליים</h4>
-                            <p class="blog-snapshot-text">בעידן של אורות מהבהבים ו"תשובות מיידיות", קל לחשוב שילדים צריכים משחקים וכוכבי זהב כדי להישאר מעורבים. אבל בויקידס, אנחנו מאמינים במנוע חזק יותר: מוטיבציה פנימית...</p>
-                            <a class="blog-snapshot-btn" href="#">קראו עוד</a>
-                        </div>
-                    </article>
+            <article class="blog-snapshot-slide">
+                <div class="blog-snapshot-media">
+                    <img src="img/Blog/1-The_Joy_the_Little_Expert.png" alt="The Joy of the Little Expert">
                 </div>
-                <div class="blog-snapshot-dots"></div>
-                <button class="blog-snapshot-nav prev" aria-label="הקודם"></button>
-                <button class="blog-snapshot-nav next" aria-label="הבא"></button>
-            </div>
+                <div class="blog-snapshot-body">
+                    <h4>The Joy of the Little Expert</h4>
+                    <p class="blog-snapshot-text">There is a special kind of magic in those quiet moments when your child casually drops a "knowledge bomb" into a conversation. Whether it is your four-year-old mentioning, completely out of the blue, that "did you know dolphins sleep with one eye open?" or your five-year-old explaining why volcanoes erupt during a family dinner.</p>
+                    <a class="blog-snapshot-btn" href="#">Read More</a>
+                </div>
+            </article>
+            <article class="blog-snapshot-slide">
+                <div class="blog-snapshot-media">
+                    <img src="img/Blog/2-How_Curiosity_Actually_Works.png" alt="How Your Child's Curiosity Actually Works">
+                </div>
+                <div class="blog-snapshot-body">
+                    <h4>The Web of Wonder: How Your Child's Curiosity Actually Works</h4>
+                    <p class="blog-snapshot-text">As adults, we think in straight lines. But a child's mind works like a beautiful, branching web. A quiet moment learning about koalas might trigger a thought about Australia, which naturally flows into questions about kangaroos, then deserts, then camels, then Egypt and pyramids.</p>
+                    <a class="blog-snapshot-btn" href="#">Read More</a>
+                </div>
+            </article>
+            <article class="blog-snapshot-slide">
+                <div class="blog-snapshot-media">
+                    <img src="img/Blog/3-When_Curiosity_Outpaces_Reading.png" alt="When Curiosity Outpaces Reading">
+                </div>
+                <div class="blog-snapshot-body">
+                    <h4>When Curiosity Outpaces Reading: Opening the World for Independent Explorers</h4>
+                    <p class="blog-snapshot-text">There is a specific, beautiful window in childhood, between the ages of 3 and 8, where a child's curiosity is moving at a hundred miles an hour, but their reading skills are still catching up. They want to know everything about dinosaurs, space, animals, and how things work.</p>
+                    <a class="blog-snapshot-btn" href="#">Read More</a>
+                </div>
+            </article>
+            <article class="blog-snapshot-slide">
+                <div class="blog-snapshot-media">
+                    <img src="img/Blog/4-Why-Real_Discovery_Beats_Digital_Trophies.png" alt="Why Real Discovery Beats Digital Trophies">
+                </div>
+                <div class="blog-snapshot-body">
+                    <h4>The "Aha!" Moment: Why Real Discovery Beats Digital Trophies</h4>
+                    <p class="blog-snapshot-text">In an era of flashing lights and "instant answers," it is easy to think that children need games and gold stars to stay engaged. But at Wikids, we believe in a more powerful engine: intrinsic motivation. The natural joy of discovery that comes from learning something new and fascinating.</p>
+                    <a class="blog-snapshot-btn" href="#">Read More</a>
+                </div>
+            </article>
         </div>
     </section>
 
@@ -1150,60 +1055,6 @@
         reveals.forEach(el => observer.observe(el));
     })();
 
-    // Blog Snapshots Slider
-    (function() {
-        const track = document.querySelector('.blog-snapshots-track');
-        const slides = document.querySelectorAll('.blog-snapshot-slide');
-        const dotsContainer = document.querySelector('.blog-snapshot-dots');
-        const prevBtn = document.querySelector('.blog-snapshot-nav.prev');
-        const nextBtn = document.querySelector('.blog-snapshot-nav.next');
-
-        if (!track || !slides.length) return;
-
-        let currentIndex = 0;
-        const totalSlides = slides.length;
-
-        // Create dots
-        slides.forEach((_, i) => {
-            const dot = document.createElement('button');
-            dot.classList.add('blog-snapshot-dot');
-            if (i === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => goToSlide(i));
-            dotsContainer.appendChild(dot);
-        });
-
-        const dots = document.querySelectorAll('.blog-snapshot-dot');
-
-        function updateSlider() {
-            // RTL: positive transform to go "next" (visually left in RTL)
-            track.style.transform = `translateX(${currentIndex * (100 + 2.4)}%)`;
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === currentIndex);
-            });
-        }
-
-        function goToSlide(index) {
-            currentIndex = index;
-            updateSlider();
-        }
-
-        function nextSlide() {
-            currentIndex = (currentIndex + 1) % totalSlides;
-            updateSlider();
-        }
-
-        function prevSlide() {
-            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-            updateSlider();
-        }
-
-        // RTL: swap button functions
-        prevBtn.addEventListener('click', nextSlide);
-        nextBtn.addEventListener('click', prevSlide);
-
-        // Auto-advance every 5 seconds
-        setInterval(nextSlide, 5000);
-    })();
     </script>
 </body>
 </html>
